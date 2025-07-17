@@ -34,17 +34,33 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    color: #212121;
+    opacity: 70% ;
 }
 
 .profile__edit-btn {
     margin-top: auto;
+    background-color: transparent;
+    border: none;
+    color: #212121;
+    opacity: 70% ;
+    display: flex;
+    flex-direction: wrap;
 }
 
 .profile__add-btn {
     margin-left: auto ;
+    margin-top: auto;
+     background-color: transparent;
+     border: none;
+     width: 149px;
+     height: 52px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 627px) {     
     .profile {
         flex-direction: column;
         max-width: 288px;
