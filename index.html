@@ -8,15 +8,14 @@
     <meta name="keywords" content="TripleTen" />
 
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <title>Spots Project</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
+        <img src="images/logo.svg" alt="Spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
@@ -25,16 +24,16 @@
             alt="Bessie Coleman"
             class="profile__avatar"
           />
-          <div class="profile__column">   
+          <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <!-- </div> -->
             <button type="button" class="profile__edit-btn">
-              <img src="images/PencilIcon.svg" alt="pencil icon"> Edit Profile
+              <img src="images/PencilIcon.svg" alt="pencil icon" /> Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img src="images/Plus SYmbol.svg" alt="add sign"> New Post
+            <img src="images/Plus SYmbol.svg" alt="add sign" /> New Post
           </button>
           <!-- </div> -->
           <!-- DIV that was closed -->
@@ -119,6 +118,65 @@
         </section>
       </main>
       <footer class="footer">2025 © Spots</footer>
+
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">X</button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form action="" class="modal__form">
+            <label for="profile-name-input" class="modal_label">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input"
+                placeholder="Type your name"
+              />
+            </label>
+            <label for="profile-description-input" class="modal_label">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
+
+
+    <!--- New Open DIV-->
+    <!-- <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">X</button>
+          <h2 class="modal__title">New Post</h2>
+          <form action="" class="modal__form">
+            <label for="profile-name-input" class="modal_label">
+              Image link
+              <input
+                id="card-caption-input"
+                type="url"
+                class="modal__input"
+                placeholder="Place a link to the picture"
+              />
+            </label>
+            <label for="profile-description-input" class="modal_label">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div> -->
+
   </body>
 </html>

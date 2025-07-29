@@ -1,0 +1,126 @@
+.modal {
+    visibility: hidden;
+    background-color: #00000080;   
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_is-opened{
+    visibility: visible;
+}
+
+
+.modal__container {
+    width: 730px;
+    height: 408px; 
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 32px 50px;
+    position: relative;
+    gap: 32px;;
+
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 32px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+     background-color: transparent;
+     color: black;
+     opacity: 40%;
+     border-radius: 8px;
+     border: none;
+}
+
+.modal__title {
+    margin: 0 0 32px;
+    width: 169px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #212121;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__label {
+    width: 49px;
+    height: 18px;
+    font-weight: 500;
+    size: 16px;
+    color: #212121;
+    gap: 32px;
+    opacity: 70%;
+}
+
+.modal__input {
+    display: block;
+    width: 630px;
+    height: 52px;
+    font-weight: 500;
+    size: 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+    margin-right: 12px;
+    margin-bottom: 16px;
+    gap: 8px;
+    color: #212121;
+}
+
+.modal__input::placeholder {
+    color: #212121;
+    width: 163px;
+    height: 20px;
+    font-weight: 500;
+    size: 20px;
+    font-style: medium;
+    opacity: 40%;
+    margin-right: 50px;
+}
+
+.modal__submit-btn {
+    background-color: #212121;
+    color: white;
+    border: none;
+    width: 156px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 8px;
+    margin-top: 18px;
+    margin-right: 32px;
+    margin-bottom: 18px;
+    max-width: none;
+    width: 156px;
+}
+
+
+@media screen and (max-width: 627px) {
+ .modal__container {
+    width: 300px;
+    height: 336px;
+ }
+
+
+.modal__input {
+width: 276px;
+height: 48px;
+}
+
+.modal__submit-btn {
+    width: 276px;
+    height: 52px;
+}
+}
