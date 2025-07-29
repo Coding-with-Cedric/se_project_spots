@@ -23,7 +23,7 @@
     background-color: #fff;
     padding: 32px 50px;
     position: relative;
-    gap: 32px;;
+    gap: 32px;
 
 }
 
@@ -122,5 +122,10 @@ height: 48px;
 .modal__submit-btn {
     width: 276px;
     height: 52px;
+
+}
+
+.modal__label {
+font-size: 32px;
 }
 }
