@@ -1,4 +1,4 @@
-const  initalCards = [ //Object 1
+const  initialCards = [ //Object 1
     {       
         name: "val Thorens",
         link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -35,7 +35,7 @@ const  initalCards = [ //Object 1
     },
 ];
 
-initalCards.forEach(function (card) {
+initialCards.forEach(function (card) {
     console.log(card.name); 
 })
 
