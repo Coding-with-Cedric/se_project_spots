@@ -35,27 +35,82 @@ const  initialCards = [ //Object 1
     },
 ];
 
-initialCards.forEach(function (card) {
-    console.log(card.name); 
-})
 
 const editProfileBtn = document.querySelector(".profile__edit-btn"); 
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
+const editProfileFormEl = editProfileModal.querySelector(".modal__form");
+const editProfileNameInput = editProfileModal.querySelector(
+    "#profile-name-input"
+); 
+
+const editProfileDescriptionInput = editProfileModal.querySelector(
+    "#profile-description-input"); 
 
 editProfileBtn.addEventListener("click", function () {
     editProfileModal.classList.add("modal_is-opened");
+    editProfileNameInput.value = profileNameEl.textContent;
+    editProfileDescriptionInput.value = profileDescriptionEl.textContent; 
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
     editProfileModal.classList.remove("modal_is-opened");
 });
 
+// Submission Handler 
+
+function handleProfileFormSubmit(evt) {
+  // Prevent default browser behavior.
+  evt.preventDefault(); 
+ 
+profileNameEl.textContent = editProfileNameInput.value; 
+profileDescriptionEl.textContent = editProfileDescriptionInput.value; 
+
+  // Close the modal.
+   editProfileModal.classList.remove("modal_is-opened");
+}
+
+editProfileFormEl.addEventListener("submit", handleProfileFormSubmit); 
+
+initialCards.forEach(function (card) {
+    console.log(card.name); 
+})
+
 // New Post JavaScript //
 
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector ("#new-post-modal"); 
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
+
+
+// Select form and both inputs
+
+// Select the necessary form elements. You should select
+// these from inside the modal, not the document.
+const addCardFormElement = newPostModal.querySelector(".modal__form"); 
+const nameInput = newPostModal.querySelector("#card-image-input"); 
+const linkInput = newPostModal.querySelector("#second-profile-description-input"); 
+
+// Create the form submission handler.
+function handleAddCardSubmit(evt) {
+  // Prevent default browser behavior.
+  evt.preventDefault(); 
+ 
+  // Log both input values to the console.
+console.log(nameInput.value); 
+console.log(linkInput.value); 
+
+  // Close the modal.
+     newPostModal.classList.remove("modal_is-opened");
+}
+
+// Create the submit listener.
+addCardFormElement.addEventListener('submit', handleAddCardSubmit);
+
+
+
+
+
 
 newPostBtn.addEventListener("click", function () {
     newPostModal.classList.add("modal_is-opened");
@@ -64,4 +119,9 @@ newPostBtn.addEventListener("click", function () {
 newPostCloseBtn.addEventListener("click", function () {
     newPostModal.classList.remove("modal_is-opened"); 
 });
+
+// Spots Stage 6 Part 1
+const profileNameEl = document.querySelector(".profile__name"); 
+const profileDescriptionEl = document.querySelector(".profile__description"); 
+
 

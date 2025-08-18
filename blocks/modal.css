@@ -9,10 +9,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 2s ease, visibility 5s ease-in-out;
 }
 
 .modal_is-opened{
     visibility: visible;
+    opacity: 5; 
+
 }
 
 
