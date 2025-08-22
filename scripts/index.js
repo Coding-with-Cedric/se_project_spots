@@ -48,13 +48,16 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
     "#profile-description-input"); 
 
 editProfileBtn.addEventListener("click", function () {
-    editProfileModal.classList.add("modal_is-opened");
+    // editProfileModal.classList.add("modal_is-opened");
     editProfileNameInput.value = profileNameEl.textContent;
     editProfileDescriptionInput.value = profileDescriptionEl.textContent; 
+    openModal(editProfileModal); 
 });
 
 editProfileCloseBtn.addEventListener("click", function () {
-    editProfileModal.classList.remove("modal_is-opened");
+    // editProfileModal.classList.remove("modal_is-opened");
+    closeModal(editProfileModal); 
+    
 });
 
 // Submission Handler 
@@ -67,7 +70,8 @@ profileNameEl.textContent = editProfileNameInput.value;
 profileDescriptionEl.textContent = editProfileDescriptionInput.value; 
 
   // Close the modal.
-   editProfileModal.classList.remove("modal_is-opened");
+//    editProfileModal.classList.remove("modal_is-opened");
+   closeModal(editProfileModal); 
 }
 
 editProfileFormEl.addEventListener("submit", handleProfileFormSubmit); 
@@ -101,7 +105,8 @@ console.log(nameInput.value);
 console.log(linkInput.value); 
 
   // Close the modal.
-     newPostModal.classList.remove("modal_is-opened");
+    //  newPostModal.classList.remove("modal_is-opened");
+   closeModal(editProfileModal); 
 }
 
 // Create the submit listener.
@@ -114,14 +119,28 @@ addCardFormElement.addEventListener('submit', handleAddCardSubmit);
 
 newPostBtn.addEventListener("click", function () {
     newPostModal.classList.add("modal_is-opened");
+    openModal(editProfileModal); 
 });
 
 newPostCloseBtn.addEventListener("click", function () {
     newPostModal.classList.remove("modal_is-opened"); 
+    closeModal(editProfileModal); 
 });
 
 // Spots Stage 6 Part 1
 const profileNameEl = document.querySelector(".profile__name"); 
 const profileDescriptionEl = document.querySelector(".profile__description"); 
+
+// Open Modal 
+function openModal (modal) {
+    modal.classList.add("modal_is-opened"); 
+    openModal(editProfileModal); 
+}
+
+// Close Modal 
+function closeModal (modal) {
+    modal.classList.remove("modal_is-opened"); 
+    closeModal(editProfileModal); 
+}
 
 
