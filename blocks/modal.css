@@ -58,6 +58,7 @@
     top: 0;
     right: -52.2px;
     border: none;
+    display: none;
 }
 
 .modal__title {
@@ -191,10 +192,10 @@ margin-bottom: 16px;
 
 .modal__close-btn {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 40px;
-    height: 40px;
+    top: 81px;
+    right: 1228px;
+    width: 22.63px;
+    height: 22.63px;
      background-color: transparent;
      color: black;
      opacity: 40%;
