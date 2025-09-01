@@ -146,8 +146,8 @@ const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 // Select the necessary form elements. You should select
 // these from inside the modal, not the document.
 const addCardFormElement = newPostModal.querySelector(".modal__form"); 
-const captionInputEl = newPostModal.querySelector("#card-image-input"); 
-const linkInput = newPostModal.querySelector("#second-profile-description-input"); 
+const captionInputEl = newPostModal.querySelector("#second-profile-description-input"); 
+const linkInput = newPostModal.querySelector("#card-image-input"); 
 const previewModalCloseBtn = previewModal.querySelector(".modal__close"); 
 const previewImageEl = previewModal.querySelector(".modal__image"); 
 const previewCaptionEl = previewModal.querySelector(".modal__caption"); 
@@ -211,31 +211,6 @@ initialCards.forEach(function (item) {
     cardsList.prepend(cardElement);
 }); 
 
-addCardFormEl.addEventListener("submit", function (evt) {
-    evt.preventDefault ();
 
-    const inputValues = {
-        name: captionInputEl.value,
-        link: linkInput.value,
-    };
-
-
-    const cardElement = getCardElement (inputValues); 
-    cardsList.prepend(cardElement); 
-
-    
-    addCardModal.classList.remove("modal_is-opened"); 
-    });
-
-initialCards.forEach(function (item) {
-    const cardElement = getCardElement(item);
-    cardsList.append(cardElement); 
-}); 
-
-
-
-
-// Part 4 Like Button 
-    const cardLikeBtnEl = cardElement.querySelector("card__like-btn_active"); 
  
     
