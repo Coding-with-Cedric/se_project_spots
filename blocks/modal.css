@@ -1,5 +1,6 @@
 .modal {
     visibility: hidden;
+    opacity: 0;
     background-color: #00000080;   
     position: fixed;
     top: 0;
@@ -9,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.5s ease, visibility 0.5s ease-in-out;
+    transition: opacity 0.35s ease, visibility 0.35s ease-in-out;
     padding: 0 10px;
 }
 
@@ -19,7 +20,7 @@
 
 .modal_is-opened{
     visibility: visible;
-    opacity: 5; 
+    opacity: 1; 
 
 }
 
@@ -58,7 +59,8 @@
     top: 0;
     right: -52.2px;
     border: none;
-    display: none;
+    background-image: url(../images/whiteX.svg);
+    opacity: 1
 }
 
 .modal__title {
@@ -84,6 +86,9 @@
     gap: 32px;
     opacity: 70%;
     margin-left: 10px;
+    display: block;
+    margin-bottom: 32px;
+    display: block;
 }
 
 .modal__input {
@@ -103,12 +108,19 @@
     box-sizing: border-box;
     padding-left: 12px;
     padding-right: 12px;
+    margin: 8px 0 0;
 }
+
 
 .modal__input:hover {
     border-color: #212121;
     opacity: 100%;
 }
+
+.modal__input_type_error {
+border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 
 .modal__input::placeholder {
     color: #212121;
@@ -121,6 +133,13 @@
     margin-right: 50px;
     gap: 8px;
 }
+
+.modal__error {
+    display: block;
+    color: red;
+    margin-top: 8px;
+}
+
 
 .modal__submit-btn {
     background-color: #212121;
@@ -139,6 +158,9 @@
     width: 156px;
 }
 
+.modal__submit-btn_disabled {
+    opacity: 40%;
+}
 .modal__submit-btn:hover {
     background-color: #212121;
     opacity: 80%;
@@ -158,8 +180,15 @@
 } 
 
 .modal__caption {
-    /* To do styling */ 
     color: white;
+    display: block;
+    font-size: 14px;
+    background-color: #212121;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin-top: 10px;
+    
 }
 
 

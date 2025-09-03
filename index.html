@@ -66,24 +66,31 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn" ><img src="images/X.svg" alt = "close"></button>
           <h2 class="modal__title">Edit profile</h2>
-          <form action="#" class="modal__form">
+          <form action="#" class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
               <input
                 id="profile-name-input"
                 type="text"
+                 minlength="2"
+                maxlength="40"
                 class="modal__input"
-                placeholder=" Type your name"
+                placeholder=" Type your name" required
               />
+              <span  id="profile-name-input-error" class="modal__error"></span>
             </label>
+
             <label for="profile-description-input" class="modal__label">
               Description
               <input
                 id="profile-description-input"
                 type="text"
+                 minlength="2"
+                maxlength="200"
                 class="modal__input"
-                placeholder=" Describe yourself"
+                placeholder=" Describe yourself" required
               />
+             <span  id="profile-description-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -95,23 +102,27 @@
         <div class="modal__container">
           <button type="button" class="modal__close-btn" ><img src="images/X.svg" alt = "close"></button>
           <h2 class="modal__title">New post</h2>
-          <form action="#" class="modal__form">
+          <form action="#" class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label">
               Image Link
               <input
                 id="card-image-input"     
                 type="url"
                 class="modal__input"
-                placeholder=" Paste a link to the picture"/>
+                placeholder=" Paste a link to the picture" required/>
+                <span id="card-image-input-error" class="modal__error"></span>
             </label>
             <label for="second-profile-description-input" class="modal__label">
               Caption 
               <input
-                id="second-profile-description-input"
+                id="second-profile-description-input" required
                 type="text"
+                minlength="2"
+                maxlength="30"
                 class="modal__input"
-                placeholder=" Type your caption"
+                placeholder=" Type your caption" required
               />
+             <span  id="second-profile-description-input-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -121,21 +132,20 @@
       <!--Preview Modal-->
 <div class="modal  modal_type_preview" id="preview-modal">
         <div class="modal__image-container">
-          <button type="button" class="modal__close modal__close_type_preview"
-           aria-label="Close Modal" 
-           
-        ></button>
+          <button type="button" class="modal__close-btn modal__close_type_preview"
+           aria-label="Close Modal">
+          </button>
             <img 
-            src="#" 
+            src="" 
             alt="" 
             class="modal__image">
-            <button type="button" class="modal__close-btn"><img src="images/X.svg" alt ="close"></button>
-          <p class="modal__caption">Golden Gate Bridge</p> 
+          <p class="modal__caption"></p> 
         </div>
       </div> 
     </div>
 
 <script src="./scripts/index.js"></script>
+<script src="./scripts/validation.js"></script>
   </body>
 </html>
 
