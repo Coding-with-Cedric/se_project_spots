@@ -6,7 +6,7 @@
 
 .page__section {
     background-color: #fcf5e5;
-    background: cover;
+    background-size: cover;
     max-width: 1280px;
     margin: 0 auto;
 }
